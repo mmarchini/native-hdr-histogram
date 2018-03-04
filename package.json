@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/mcollina/native-hdr-histogram#readme",
   "devDependencies": {
-    "aws-sdk": "^2.183.0",
+    "aws-sdk": "^2.205.0",
     "pre-commit": "^1.1.2",
     "standard": "^10.0.3",
     "tap": "^11.0.1"
