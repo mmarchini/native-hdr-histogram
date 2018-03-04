@@ -37,6 +37,9 @@
     "standard": "^10.0.3",
     "tap": "^11.0.1"
   },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
   "binary": {
     "module_name": "histogram",
     "module_path": "./lib/binding/{node_abi}-{platform}-{arch}",
