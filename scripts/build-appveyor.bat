@@ -114,12 +114,7 @@ IF %ERRORLEVEL% NEQ 0 GOTO ERROR
 IF /I "%NPM_BIN_DIR%"=="%CD%" ECHO ERROR npm bin -g equals local directory && SET ERRORLEVEL=1 && GOTO ERROR
 ECHO ===== where npm puts stuff END ============
 
-
-IF "%nodejs_version:~0,1%"=="0" CALL npm install -g https://github.com/springmeyer/node-gyp/tarball/v3.x
-IF %ERRORLEVEL% NEQ 0 GOTO ERROR
-IF "%nodejs_version:~0,1%"=="4" CALL npm install -g node-gyp@3.x
-IF %ERRORLEVEL% NEQ 0 GOTO ERROR
-IF "%nodejs_version:~0,1%"=="5" CALL npm install -g node-gyp@3.x
+CALL npm install -g node-gyp@3.x
 IF %ERRORLEVEL% NEQ 0 GOTO ERROR
 
 CALL npm install --build-from-source --msvs_version=%msvs_version% %TOOLSET_ARGS% --loglevel=http
